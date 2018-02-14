@@ -36,11 +36,11 @@ nav ul li a {
 	transition: all .5s;
 }
 nav	ul li a:hover {
-color:white;
-background-color: orange;
+    color:white;
+    background-color: orange;
 }
-
 /* fin du menu */
+
 .container {
 	box-sizing: border-box;
 	width: 1200px;
@@ -84,13 +84,13 @@ figure.float-droite {
 	position: relative;
 }
 .adresse, .tel {
-font-size: 0.8em;
-font-style: italic;
-color: gray;
-text-align: right;
-position: absolute;
-right:0;
-margin:0;
+    font-size: 0.8em;
+    font-style: italic;
+    color: gray;
+    text-align: right;
+    position: absolute;
+    right:0;
+    margin:0;
 }
 .adresse {
 	top:0;
