@@ -9,6 +9,11 @@ body {
 img {
 	max-width: 100%;
 }
+/*correction-6*/
+.resto p.desc {
+    text-align: justify;
+}
+
 /* notre menu */
 .menu-toggle {
 	display: none;
