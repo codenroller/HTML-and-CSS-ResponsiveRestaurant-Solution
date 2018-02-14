@@ -113,13 +113,21 @@ h2 {
 }
 
 @media screen and (max-width:768px) {
-	body { border :none;}
+	body { border :none;
+
+	}
 	.container {
-	width: 98%;
+	    width: 98%;
 	}
 	.resto {
         padding-bottom: 50px; /*correction-1, correction-3*/
 	}
+    /*correction-4*/
+    .adresse, .tel {
+        position: static;
+        text-align: left;
+        margin: 0.5em 0;
+    }
 	h2 {
 		margin: 0 0 1em;
 	}
@@ -135,12 +143,6 @@ h2 {
 		float:none;
 		width: 100%
 	}
-	.adresse, .tel {
-		position: static;
-		text-align: left;
-		margin: 0.5em 0;
-	}
-
 	h2 {
 		margin:0 0 0.5em;
 	}
