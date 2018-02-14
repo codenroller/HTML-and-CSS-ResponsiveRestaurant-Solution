@@ -6,6 +6,11 @@ body {
 	margin:0; padding:0;
 	border:20px solid white;
 }
+
+header {
+    margin: 20px auto 30px auto;
+}
+
 img {
 	max-width: 100%;
 }
@@ -27,17 +32,23 @@ nav {
 }
 nav ul {
 	list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
 }
 nav ul li {
 	display: inline-block;
 }
 nav ul li a {
+    display: block; /*Part-2: menu modification*/
+    width: 150px; /*Part-2: menu modification*/
 	text-decoration: none;
 	color:orange;
 	background-color: white;
 	border:1px solid orange;
 	border-radius: 5px;
 	padding: 5px 15px;
+    margin: 10px;
+    font-size: 1.25em;
 	transition: all .5s;
 }
 nav	ul li a:hover {
@@ -125,65 +136,95 @@ h2 {
     }
 }
 
-@media screen and (max-width:768px) {
-	body { border :none;
+/*Part-2: menu modification:*/
+@media screen and (max-width:992px) {
+    nav ul li a {
+        width: 130px;
+        margin: 5px;
+        font-size: 1em;
+    }
+}
 
-	}
-	.container {
-	    width: 98%;
-	}
-	.resto {
+@media screen and (max-width:768px) {
+    body {
+        border: none;
+    }
+
+    .container {
+        width: 98%;
+    }
+
+    .resto {
         padding-bottom: 50px; /*correction-1, correction-3*/
-	}
+    }
     /*correction-4*/
     .adresse, .tel {
         position: static;
         text-align: left;
         margin: 0.5em 0;
     }
-	h2 {
-		margin: 0 0 1em;
-	}
+
+    h2 {
+        margin: 0 0 1em;
+    }
+
+    /*Part-2: menu modification:*/
+    nav ul li a {
+        width: 100px;
+        margin: 2.5px;
+    }
 }
+
 @media screen and (max-width:640px) {
-	body { 
-        border :none;
-	}
-	.container {
-	    width: 100%;
-	}
-	figure, figure.float-droite, .content {
-		float:none;
-		width: 100%
-	}
-	h2 {
-		margin:0 0 0.5em;
-	}
+    body {
+        border: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    figure, figure.float-droite, .content {
+        float: none;
+        width: 100%
+    }
+
+    h2 {
+        margin: 0 0 0.5em;
+    }
+
     /* notre menu pour le mobile */
     .menu-toggle {
-	    display: block;
-	    padding: 10px;
+        display: block;
+        padding: 10px;
     }
+
     nav {
-	    display: none;
-	    text-align: left;
+        display: none;
+        text-align: left;
     }
-    nav ul {
-	    padding: 0;
-	    list-style-type: none;
-    }
-    nav ul li {
-	    display: block;
-    }
-    nav ul li a {
-	    display: block;
-	    text-decoration: none;
-	    color:orange;
-	    background-color: white;
-	    transition: all .5s;
-	    border-radius: 0;
-    }
+
+        nav ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+            nav ul li {
+                display: block;
+            }
+
+                nav ul li a {
+                    display: block;
+                    min-width: 60%; /*Part-2: menu modification:*/
+                    text-decoration: none;
+                    text-align: center;
+                    color: orange;
+                    background-color: white;
+                    transition: all .5s;
+                    border-radius: 0;
+                }
+
     .open {
-	    display: block;
+        display: block;
     }
 }
