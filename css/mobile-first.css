@@ -1,0 +1,205 @@
+﻿html {
+    font-size: 16px
+}
+
+body {
+    background-color: #eaeaea;
+    margin: 5px;
+    padding: 0;
+}
+
+header {
+    margin: 5px;
+    padding: 15px 0;
+}
+
+.container {
+    width: 96%;
+    padding: 2%;    
+}
+
+.resto {
+    position: relative;
+    background-color: white;
+    margin: 10px auto 30px auto;
+    padding: 5px;
+    padding-bottom: 50px;
+}
+
+.resto figure {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.resto figure>img {
+    width: 100%;
+}
+
+.resto div.content {
+    padding: 15px;
+}
+
+.resto h2 {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+.resto p.adresse, .resto p.tel {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    color: gray;
+    text-align: left;
+}
+
+.resto p.desc {
+    text-align: justify;
+}
+
+a.more {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    display: block;
+    width: 120px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background: orange;
+    padding: 5px 10px;
+}
+
+/* notre menu pour le mobile */
+.menu-toggle {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+    font-size: 1.5em
+}
+
+nav {
+    display: none;
+    margin: 40px;
+    margin-top: -10px;
+    text-align: center;
+}
+    nav ul {
+        padding: 0;
+        list-style-type: none;
+        margin: 0 auto;
+    }
+        nav ul li {
+            display: block;
+        }
+
+            nav ul li a {
+                display: block;
+                width: 60%;
+                margin: 2.5px;
+                padding: 5px;
+                text-decoration: none;
+                color: orange;
+                text-align: center;
+                background-color: white;
+                border: 1px solid orange;
+                transition: all .5s;
+                border-radius: 0;
+            }
+                nav ul li a:hover {
+                    color: white;
+                    background-color: orange;
+                }
+.open {
+    display: block;
+}
+/* fin du menu */
+
+@media screen and (min-width:576px) {
+    .resto figure {
+        float: left;
+        max-width: 40%;
+        width: 250px;
+        margin: 15px 20px 5px 15px;
+    }
+    .resto:nth-child(even) figure {
+        float:right;
+    }
+    .resto>div {
+        height: 350px;
+        overflow: hidden;
+    }
+    a.more {
+        clear: both;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .resto > div {
+        height: 300px;
+        overflow: hidden;
+    }
+
+    /*navigation menu: from burger to normal*/
+    .menu-toggle {
+        display: none;
+    }
+    nav {
+        display: block;
+        margin: 40px auto 20px auto;
+    }
+        nav ul li {
+            display: inline-block;
+        }
+            nav ul li a {
+                width: 145px;
+                border-radius: 5px;
+                font-size: 1.25em;
+                margin: 5px;
+            }
+    /*end of navigation menu*/
+
+}
+
+@media screen and (min-width:992px) {
+    body {
+        font-size: 20px;
+    }
+    .resto div.content {
+        margin: 15px 15px 15px 300px;
+        height: 220px;
+        overflow: hidden;
+    }
+    .resto:nth-child(even) div.content {
+        margin: 15px 300px 15px 15px;
+    }    
+    .resto h2 {
+        float: left;
+        width: 60%;
+    }
+    .resto p.adresse {
+        float: right;
+        width: 40%;
+        text-align: right;
+    }    
+    .resto p.tel {
+        clear: right;
+        text-align: right;
+    }
+
+    /*navigation menu: making buttons larger*/
+    nav ul li a {
+        width: 160px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .container {
+        width: 1100px;
+        margin: auto;
+    }
+    .resto {
+        margin-bottom: 50px;
+    }
+}
