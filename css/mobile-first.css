@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #eaeaea;
+    background-color:  #eaeaea; 
     margin: 5px;
     padding: 0;
 }
@@ -66,8 +66,13 @@ a.more {
     text-decoration: none;
     text-align: center;
     color: white;
-    background: orange;
+    background: orangered;
+    border-radius: 2.5px;
     padding: 5px 10px;
+}
+
+a.more:hover {
+    background-color: orange;
 }
 
 /* notre menu pour le mobile */
@@ -75,7 +80,7 @@ a.more {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: orange;
+    color: orangered;
     font-weight: bold;
     font-size: 1.5em
 }
@@ -101,16 +106,17 @@ nav {
                 margin: 2.5px;
                 padding: 5px;
                 text-decoration: none;
-                color: orange;
+                color: #ff6a32;
                 text-align: center;
                 background-color: white;
-                border: 1px solid orange;
+                border: 1px solid orangered;
                 transition: all .5s;
                 border-radius: 0;
             }
                 nav ul li a:hover {
                     color: white;
                     background-color: orange;
+                    border-color: #ff6a32;
                 }
 .open {
     display: block;
