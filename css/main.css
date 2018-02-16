@@ -1,0 +1,36 @@
+﻿.main {
+    width: 80%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 5%;
+}
+
+.main h1 {
+    text-align: center;
+    font-size: 2em;
+    color: orangered;
+}
+
+.main h2 {
+    color: grey;
+}
+
+.main h2, main h3 {
+    text-align: left;
+}
+
+.main h3 {
+    color: orangered;
+}
+
+.main h5 {
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.main p {
+    text-align:justify;
+}
