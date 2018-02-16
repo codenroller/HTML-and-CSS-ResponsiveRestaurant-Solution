@@ -31,6 +31,43 @@
     font-weight: normal;
 }
 
+main article {
+    margin: 0;
+    padding: 0;
+}
+
+.main li {
+    margin: 1em 0;
+    text-align:justify;
+}
+
+.main a#gitlink {
+    margin: 0 0 0 50px;
+    padding: 10px;
+    text-decoration:none;
+    color: grey;
+}
+.main a#gitlink:hover, .main a#gitlink:active, .main a#gitlink:visited {
+    text-decoration:none;
+    border: none;
+}
+.main a#gitlink:hover {
+    color: orangered;
+}
+
 .main p {
     text-align:justify;
 }
+
+.main strong {
+    color: grey;
+    font-weight: normal;
+    text-decoration:underline;
+}
+
+.main span {
+    color: forestgreen;
+    font-family: courier;
+    font-size: 0.8em;
+}
+

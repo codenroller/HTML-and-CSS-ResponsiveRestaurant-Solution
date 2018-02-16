@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment</title>
+    <link href="css/mobile-first.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <a class="menu-toggle" href="">&#9776;</a>
+        <nav>
+            <ul>
+                <li><a href="./assignment.html">Assignment</a></li>
+                <li><a href="./solution.html">Solution</a></li>
+                <li><a href="./index.html">Desktop First !</a></li>
+                <li><a href="./mobile-first.html">Mobile First !</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="main">
+            <main>                
+                <h1> Learning Responsive Web Design </h1>
+                <h2>Solution to Responsive Restaurant Project </h2>
+          
+                <p>Link to the solution git repository:</p>
+                    <a id="gitlink" href="https://github.com/codenroller/HTML-and-CSS-ResponsiveRestaurant-Solution.git">
+                        https://github.com/codenroller/HTML-and-CSS-ResponsiveRestaurant-Solution.git
+                    </a>
+                    <article>
+                        <h3>Bug Fix Strategy</h3>
+                        <p>
+                            When fixing the bugs on the original project I was relying on the following rules:
+                            <ul>
+                                <li>Do not modify the initial html file</li>
+                                <li>Modify the original .css file as less as possible</li>
+                            </ul>
+                        </p>
+
+                        <h3>Bugs and Fixes</h3>
+                        <ol>
+                            <li>
+                                <strong>Bug description:</strong>  the button 'En savoir plus'
+                                overlaps with restaurant description text for screens of size smaller
+                                than 640px.<br />
+
+                                <strong>Correction:</strong>
+                                the media query for screens of size 640px and smaller has been corrected.<br />
+                                The string:<br />
+                                <span> .resto { min-height: 570px;}</span> <br />
+                                was replaced with <br />
+                                <span> .resto { padding-bottom: 50px;}</span>
+                            </li>
+
+                            <li>
+                                <strong>Bug description:</strong> A script for a responsive menu initially
+                                has been placed outside  the document body. <br />
+                                <strong>Correction:</strong> The script reference was moved to the body section of the document.
+                            </li>
+
+                            <li>
+                                <strong>Bug description:</strong> 'En savoir plus button overlaps with a restaurant description
+                                on screens of size 641px - 768px. <br />
+                                <strong>Correction:</strong> 
+                                two media queries: (screens with max-width: 640px) and (screens with max-width: 768px) 
+                                have been updated.
+                                The style for class 'resto' has been removed from the media query for 
+                                (screens with max-width: 640px).
+                                The style for class 'resto' has been added to the media query for
+                                (screens with max-width: 768px):<br />
+                                <span> .resto {padding-bottom: 50px}; </span>
+                            </li>
+
+                            <li>
+                                <strong>Bug description:</strong>
+                                Restaurant title block overlaps with address
+                                and phone blocks for the screens within the width range of 641px-768px. <br />
+                                <strong>Correction:</strong>
+                                The decision is to use for this width range
+                                the same layout as for the screen widths lower than 640px.
+                                When implementing this solution the styles for class='address' and class='tel'
+                                were moved from the media query (max-width 640px) to the media query (max width 768px).
+                            </li>
+
+                            <li>
+                                <strong>Bug description:</strong>
+                                The site is not behaving responsively for screens of size 769px and approximately 1300px <br />
+                                <strong>Correction:</strong> 
+                                The additional media query for screens of (max-width 1300px) has been added.
+                            </li>
+
+                            <li>
+                                <strong>Bug description:</strong>
+                                The text-alignment of restaurant description needs to be changed to 'justify'.
+                                <strong>Correction:</strong>
+                                The text-alignment of restaurant description text has been changed to justify
+                                for all screen sizes.
+                            </li>
+
+                            <li>
+                                <strong>Bug description:</strong>
+                                It is not a bug really, but on the web page the max-width of an image
+                                does not exceed 650px. So I decided to use the image of smaller size (if we measure in KB
+                                then our new image is approximately 5 times smaller than the original one). <br/>
+                                <strong>Correction:</strong>
+                                The web page image was replaced with the image of a smaller size.
+                                The new image file assets/serveimage_600x400.jpeg has been added.
+                                The links to the image have been updated in index.html.
+                            </li>
+
+                        </ol>
+                    </article>   
+               
+                </main>
+        </div>
+
+    </div>
+
+    <div class="scripts">
+        <!-- un peu de magie javascriptesque pour le bon fonctionnement de la démo-->
+        <script src="./js/main.js"></script>
+    </div>
+</body>
+</html>
